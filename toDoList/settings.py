@@ -29,8 +29,7 @@ SECRET_KEY = 'django-insecure-!_^+c-c-=rjt9-3%=owp#7%ngnt7))-0_w98#i!r^4afpgh$4=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['baki-api.herokuapp.com','127.0.0.1']
-
+ALLOWED_HOSTS = ['baki-api.herokuapp.com', '127.0.0.1']
 
 # Application definitionc
 
@@ -84,7 +83,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'toDoList.wsgi.application'
 
-SITE_ID=1
+SITE_ID = 1
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
@@ -94,7 +93,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -114,7 +112,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/4.0/topics/i18n/
 
@@ -125,7 +122,6 @@ TIME_ZONE = 'Asia/Dhaka'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
@@ -154,4 +150,5 @@ REST_FRAMEWORK = {
     ]
 }
 
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+# STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
