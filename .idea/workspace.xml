@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="663ced28-f880-4b4a-826d-b5910dde1304" name="Changes" comment="need payment for this, seriously">
+    <list default="true" id="663ced28-f880-4b4a-826d-b5910dde1304" name="Changes" comment="seriously need payment for this">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/toDoList/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/toDoList/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +67,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647794683272</updated>
-      <workItem from="1647794685514" duration="14310000" />
+      <workItem from="1647794685514" duration="14918000" />
     </task>
     <task id="LOCAL-00001" summary="Airport Night... mosquitoes bytes">
       <created>1647805422740</created>
@@ -131,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647808814499</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="seriously need payment for this">
+      <created>1647809466401</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1647809466401</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,6 +167,7 @@
     <MESSAGE value="Finally, mosquito night will be over" />
     <MESSAGE value="need payment for this" />
     <MESSAGE value="need payment for this, seriously" />
-    <option name="LAST_COMMIT_MESSAGE" value="need payment for this, seriously" />
+    <MESSAGE value="seriously need payment for this" />
+    <option name="LAST_COMMIT_MESSAGE" value="seriously need payment for this" />
   </component>
 </project>

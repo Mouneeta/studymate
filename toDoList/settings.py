@@ -37,7 +37,6 @@ ALLOWED_HOSTS = ['baki-api.herokuapp.com', '127.0.0.1']
 # Application definitionc
 
 INSTALLED_APPS = [
-    'bootstrap_admin',
     'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -155,5 +154,3 @@ REST_FRAMEWORK = {
     ]
 }
 
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
