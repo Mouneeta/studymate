@@ -24,7 +24,6 @@ urlpatterns = [
     path('studyMat/',include("studyMat.urls")),
     path('admin/', admin.site.urls),
     path('hello/', include("app.urls")),
-    path('about', include("app.urls")),
     path('',include('register.urls')),
     
 ]

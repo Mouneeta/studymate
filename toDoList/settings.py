@@ -32,21 +32,22 @@ ALLOWED_HOSTS = ['baki-api.herokuapp.com','https://baki-api.herokuapp.com/','127
 # Application definitionc
 
 INSTALLED_APPS = [
-    'register.apps.RegisterConfig',
-    'app',
+    'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
-    'studyMat',
-    'examMan',
-    'django.contrib.sites',
     'allauth',
     'allauth.account',
+    'rest_framework',
     'knox',
+    # local
+    'studyMat.apps.StudymatConfig',
+    'examMan.apps.ExammanConfig',
+    'register.apps.RegisterConfig',
+    'app.apps.AppConfig',
 
 ]
 
@@ -80,7 +81,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'toDoList.wsgi.application'
 
-SITE_ID=5 
+SITE_ID=1
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
