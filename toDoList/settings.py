@@ -12,16 +12,13 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 from pathlib import Path
 import os
-
+import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 import django_heroku
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
-
-
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -32,7 +29,7 @@ SECRET_KEY = 'django-insecure-!_^+c-c-=rjt9-3%=owp#7%ngnt7))-0_w98#i!r^4afpgh$4=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['baki-api.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'baki-api.herokuapp.com']
 
 # Application definitionc
 
@@ -48,6 +45,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'rest_framework',
     'knox',
+    'whitenoise.runserver_nostatic',
     # local
     'studyMat.apps.StudymatConfig',
     'examMan.apps.ExammanConfig',
@@ -60,6 +58,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -86,16 +85,40 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'toDoList.wsgi.application'
 
-SITE_ID = 1
+SITE_ID = 2
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'rest-api-db',
+#         'USER': 'MasumTheBot',
+#         'PASSWORD': 'MasumTheBot',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dokh80m175btv',
+        'USER': 'zgpzxxdjprveri',
+        'PASSWORD': '717754194d28bd14886d23cfd2fa13569ce30825370252c00002e06085d9be64',
+        'HOST': 'ec2-35-174-52-65.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
+
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -154,3 +177,4 @@ REST_FRAMEWORK = {
     ]
 }
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

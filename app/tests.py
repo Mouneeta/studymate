@@ -24,4 +24,6 @@ py manage.py runserver
 
 py manage.py dbshell
 
+python manage.py inspectdb
+
 '''
