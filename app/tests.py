@@ -16,6 +16,8 @@ python manage.py collectstatic --dry-run --noinput
 
 python manage.py collectstatic --noinput
 
+hello world 
+
 python manage.py collectstatic  
 
 py manage.py test
